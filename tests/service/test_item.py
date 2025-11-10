@@ -1,9 +1,9 @@
 import pytest
 from typing import Optional
-from {{ package_name }}.service.item import ItemServiceImpl
-from {{ package_name }}.repository.abc.i_item import IItemRepository
-from {{ package_name }}.schema.model.item import Item
-from {{ package_name }}.schema.request.item import ItemCreate
+from src.service.item import ItemServiceImpl
+from src.repository.abc.i_item import IItemRepository
+from src.schema.model.item import Item
+from src.schema.request.item import ItemCreate
 
 
 class MockItemRepository(IItemRepository):

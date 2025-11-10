@@ -13,11 +13,6 @@ project_version:
   help: "What is your project version?"
   placeholder: "0.1.0"
 
-package_name:
-  type: str
-  help: "What is your Python package name?"
-  placeholder: "my_package"
-
 author_name:
   type: str
   help: "Author name"

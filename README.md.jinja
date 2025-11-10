@@ -47,7 +47,7 @@ Once you have generated your project, you can follow these steps to get started:
 
 To run the web server, use `uvicorn`:
 ```bash
-uvicorn main:app --reload --app-dir {{ package_name }}
+uvicorn main:app --reload --app-dir src
 ```
 The application will be available at `http://127.0.0.1:8000`.
 
@@ -63,15 +63,15 @@ pytest
 - **Interface-Driven Design**: Both the Service and Repository layers are defined by interfaces (Abstract Base Classes). This allows for implementations to be easily swapped out.
 - **Dependency Injection**: The project heavily utilizes FastAPI's `Depends` system to manage dependencies.
 - **Clear Separation of Concerns**:
-  - **API Layer** (`{{ package_name }}/api`): Handles HTTP routing and request/response handling.
-  - **Service Layer** (`{{ package_name }}/service`): Contains the core business logic.
-  - **Repository Layer** (`{{ package_name }}/repository`): Manages data access.
+  - **API Layer** (`src/api`): Handles HTTP routing and request/response handling.
+  - **Service Layer** (`src/service`): Contains the core business logic.
+  - **Repository Layer** (`src/repository`): Manages data access.
 
 ## Project Structure
 
 ```
 .
-├── {{ package_name }}/
+├── src/
 ├── tests/
 ├── .gitignore
 ├── copier.yml

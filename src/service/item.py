@@ -1,9 +1,9 @@
 from fastapi import Depends
-from {{ package_name }}.service.abc.i_item import IItemService
-from {{ package_name }}.repository.abc.i_item import IItemRepository
-from {{ package_name }}.repository.item import ItemRepositoryImpl
-from {{ package_name }}.schema.model.item import Item
-from {{ package_name }}.schema.request.item import ItemCreate
+from src.service.abc.i_item import IItemService
+from src.repository.abc.i_item import IItemRepository
+from src.repository.item import ItemRepositoryImpl
+from src.schema.model.item import Item
+from src.schema.request.item import ItemCreate
 
 
 class ItemServiceImpl(IItemService):

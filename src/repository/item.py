@@ -1,7 +1,7 @@
 from typing import Dict, Any
-from {{ package_name }}.repository.abc.i_item import IItemRepository
-from {{ package_name }}.schema.model.item import Item
-from {{ package_name }}.schema.request.item import ItemCreate
+from src.repository.abc.i_item import IItemRepository
+from src.schema.model.item import Item
+from src.schema.request.item import ItemCreate
 
 
 # This would be your actual database connection/session in a real application.
