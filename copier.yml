@@ -1,0 +1,20 @@
+project_name:
+  type: str
+  help: "What is your project name?"
+  placeholder: my_project
+package_name:
+  type: str
+  help: "What is your Python package name?"
+  placeholder: my_package
+author_name:
+  type: str
+  help: "Author name"
+author_email:
+  type: str
+  help: "Author email"
+
+_min_copier_version: 7.0.0
+_exclude:
+  - ".git/"
+  - ".venv/"
+  - "*.pyc"
