@@ -33,3 +33,5 @@ _exclude:
   - ".git/"
   - ".venv/"
   - "*.pyc"
+  - "copier.yml"
+  - "copier.yaml"
