@@ -1,10 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import Optional
-from src.schema.model.item import Item
-from src.schema.request.item import ItemCreate
+from {{ package_name }}.schema.model.item import Item
+from {{ package_name }}.schema.request.item import ItemCreate
 
 
-class IItemRepository(ABC):
+class IItemService(ABC):
     @abstractmethod
     def get_item(self, item_id: int) -> Optional[Item]:
         raise NotImplementedError
