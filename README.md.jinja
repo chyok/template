@@ -2,52 +2,33 @@
 
 {{ project_description }}
 
-## Core Concepts
+This is a template project for building FastAPI applications using a clean, scalable, and interface-driven 3-tier architecture.
 
-This template is designed to enforce a strong separation of concerns, making the application easier to test, maintain, and scale.
+## How to Use This Template
 
-- **Interface-Driven Design**: Both the Service and Repository layers are defined by interfaces (Abstract Base Classes). This allows for implementations to be easily swapped out, which is great for testing (e.g., swapping a real database repository with a mock repository) and for adapting the application to new requirements.
+To create a new project based on this template, you need to have `copier` installed.
 
-- **Dependency Injection**: The project heavily utilizes FastAPI's `Depends` system to manage dependencies. This Inversion of Control (IoC) approach means that components declare their dependencies, and the framework provides them. This makes the code decoupled and highly testable.
-
-- **Clear Separation of Concerns**:
-  - **API Layer** (`{{ package_name }}/api`): Handles HTTP routing, request validation, and response serialization. It knows nothing about how data is stored or manipulated.
-  - **Service Layer** (`{{ package_name }}/service`): Contains the core business logic. It orchestrates data from repositories and performs operations. It is completely independent of the web layer.
-  - **Repository Layer** (`{{ package_name }}/repository`): Manages data access. Its only responsibility is to query and persist data, abstracting the underlying data source from the rest of the application.
-
-## Project Structure
-
-```
-.
-├── {{ package_name }}
-│   ├── api
-│   │   └── v1
-│   ├── repository
-│   │   ├── abc
-│   │   └── item.py
-│   ├── schema
-│   │   ├── model
-│   │   ├── request
-│   │   └── response
-│   └── service
-│       ├── abc
-│       └── item.py
-├── tests
-│   └── service
-│       └── test_item.py
-├── .gitignore
-├── pyproject.toml
-└── README.md
+```bash
+pip install copier
 ```
 
-## Getting Started
+Then, run the `copier copy` command, pointing to this template's repository:
+
+```bash
+copier copy gh:your-github-username/your-repo-name path/to/your-new-project
+```
+
+Copier will ask you a series of questions and generate a new project in the specified directory.
+
+## Getting Started (for the Generated Project)
+
+Once you have generated your project, you can follow these steps to get started:
 
 ### Installation
 
-1.  **Clone the repository**:
+1.  **Navigate to your new project directory**:
     ```bash
-    git clone <repository_url>
-    cd <repository_name>
+    cd path/to/your-new-project
     ```
 
 2.  **Create a virtual environment** (recommended):
@@ -75,4 +56,25 @@ The application will be available at `http://127.0.0.1:8000`.
 To run the unit tests, use `pytest`:
 ```bash
 pytest
+```
+
+## Core Concepts
+
+- **Interface-Driven Design**: Both the Service and Repository layers are defined by interfaces (Abstract Base Classes). This allows for implementations to be easily swapped out.
+- **Dependency Injection**: The project heavily utilizes FastAPI's `Depends` system to manage dependencies.
+- **Clear Separation of Concerns**:
+  - **API Layer** (`{{ package_name }}/api`): Handles HTTP routing and request/response handling.
+  - **Service Layer** (`{{ package_name }}/service`): Contains the core business logic.
+  - **Repository Layer** (`{{ package_name }}/repository`): Manages data access.
+
+## Project Structure
+
+```
+.
+├── {{ package_name }}/
+├── tests/
+├── .gitignore
+├── copier.yml
+├── pyproject.toml
+└── README.md
 ```
