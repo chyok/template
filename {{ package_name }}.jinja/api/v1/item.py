@@ -1,8 +1,8 @@
 from fastapi import APIRouter, Depends, HTTPException
-from src.service.abc.i_item import IItemService
-from src.service.item import ItemServiceImpl
-from src.schema.request.item import ItemCreate
-from src.schema.response.item import ItemResponse
+from {{ package_name }}.service.abc.i_item import IItemService
+from {{ package_name }}.service.item import ItemServiceImpl
+from {{ package_name }}.schema.request.item import ItemCreate
+from {{ package_name }}.schema.response.item import ItemResponse
 
 router = APIRouter()
 
